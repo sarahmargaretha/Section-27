@@ -8,101 +8,120 @@ import net.thucydides.core.annotations.Steps;
 import starter.PostGenerateToken;
 
 public class PostGenerateTokenSteps {
-
     @Steps
     PostGenerateToken postGenerateToken;
-
-    @Given("I set url and null username and null password to post generate token")
-    public void iSetUrlAndNullUsernameAndNullPasswordToPostGenerateToken() {
-        postGenerateToken.setUrlAndNullUsernameAndNullPassword();
+    @Given("I set url and valid token")
+    public void iSetUrlAndValidToken() {
+        postGenerateToken.setUrlAndValidToken();
     }
 
-    @When("I request post generate token")
-    public void iRequestPostGenerateToken() {
-        postGenerateToken.requestPostGenerateToken();
+    @When("I request with valid username and password")
+    public void iRequestWithValidUsernameAndPassword() {
+        postGenerateToken.requestWithValidUsernameAndPassword();
     }
 
-    @Then("I will get {int}")
-    public void iWillGet(int arg0) {postGenerateToken.validateStatusCode();
+    @Then("I get status code 200")
+    public void iGetStatusCode200() {
+        postGenerateToken.statusCode200();
     }
 
-    @And("get Error message")
-    public void getErrorMessage() {
-        postGenerateToken.validateStatusMessage();
+    @Given("I set url and null body")
+    public void iSetUrlAndNullBody() {
+        postGenerateToken.setUrlAndNullBody();
     }
 
-    @Given("I set url and null username and valid password to post generate token")
-    public void iSetUrlAndNullUsernameAndValidPasswordToPostGenerateToken() {
-        postGenerateToken.setUrlAndNullUsernameAndValidPassword();
+    @When("I request with null username and null password")
+    public void iRequestWithNullUsernameAndNullPassword() {
+        postGenerateToken.requestWithNullBody();
     }
 
-    @When("I request post generate token with null username and valid password")
-    public void iRequestPostGenerateTokenWithNullUsernameAndValidPassword() {
-        postGenerateToken.requestPostGenerateTokenWithNullUsernameAndValidPassword();
+    @Given("I set url and valid password")
+    public void iSetUrlAndValidPassword() {
+        postGenerateToken.setUrlAndValidPassword();
     }
 
-    @Given("I set url and valid username and null password to post generate token")
-    public void iSetUrlAndValidUsernameAndNullPasswordToPostGenerateToken() {
-        postGenerateToken.setUrlAndValidUsernameAndNullPassword();
+    @When("I request with null username")
+    public void iRequestWithNullUsername() {
+        postGenerateToken.requestWithNullUserName();
     }
 
-    @When("I request post generate token with valid username and null password")
-    public void iRequestPostGenerateTokenWithValidUsernameAndNullPassword() {
-        postGenerateToken.requestPostGenerateTokenWithValidUsernameAndNullPassword();
+    @And("status code 400")
+    public void statusCode400() {
+        postGenerateToken.statusCode400();
     }
 
-    @Given("I set url and invalid username and invalid password to post generate token")
-    public void iSetUrlAndInvalidUsernameAndInvalidPasswordToPostGenerateToken() {
-        postGenerateToken.setUrlAndInvalidUsernameAndInvalidPassword();}
-
-    @When("I request post generate token with invalid username and invalid password")
-    public void iRequestPostGenerateTokenWithInvalidUsernameAndInvalidPassword() {
-        postGenerateToken.requestPostGenerateTokenWithInvalidUsernameAndInvalidPassword();}
-
-    @Then("I will get code {int}")
-    public void iWillGetCode(int arg0) {postGenerateToken.validateCode();
+    @Given("I set url and valid username")
+    public void iSetUrlAndValidUsername() {
+        postGenerateToken.setUrlAndValidUserName();
     }
 
-    @And("get Failed message")
-    public void getFailedMessage() {postGenerateToken.validateFailedMessage();
+    @When("I request with null password")
+    public void iRequestWithNullPassword() {
+        postGenerateToken.requestWithNullPassword();
     }
 
-    @Given("I set url and valid username and invalid password to post generate token")
-    public void iSetUrlAndValidUsernameAndInvalidPasswordToPostGenerateToken() {
-        postGenerateToken.setUrlAndValidUsernameAndInvalidPassword();
+    @Given("I set url and invalid body")
+    public void iSetUrlAndInvalidBody() {
+        postGenerateToken.setUrlAndInvalidBody();
     }
 
-
-    @When("I request post generate token with valid username and invalid password")
-    public void iRequestPostGenerateTokenWithValidUsernameAndInvalidPassword() {
-        postGenerateToken.requestPostGenerateTokenWithValidUsernameAndInvalidPassword();
+    @When("I request with invalid body")
+    public void iRequestWithInvalidBody() {
+        postGenerateToken.requestWithInvalidBody();
     }
 
-
-    @Given("I set url and invalid username and valid password to post generate token")
-    public void iSetUrlAndInvalidUsernameAndValidPasswordToPostGenerateToken() {
-        postGenerateToken.setUrlAndInvalidUsernameAndValidPassword();
+    @Given("I set url and integer body")
+    public void iSetUrlAndIntegerBody() {
+        postGenerateToken.setUrlAndIntegerBody();
     }
 
-    @When("I request post generate token with invalid username and valid password")
-    public void iRequestPostGenerateTokenWithInvalidUsernameAndValidPassword() {
-        postGenerateToken.requestPostGenerateTokenWithInvalidUsernameAndValidPassword();
+    @When("I request with integer body")
+    public void iRequestWithIntegerBody() {
+        postGenerateToken.requestWithIntegerBody();
     }
 
-    @Given("I set url and valid username and valid password to post generate token")
-    public void iSetUrlAndValidUsernameAndValidPasswordToPostGenerateToken() {
-        postGenerateToken.setUrlAndValidUsernameAndValidPassword();
+    @And("I set integer username and valid password")
+    public void iSetIntegerUsernameAndValidPassword() {
+        postGenerateToken.setIntegerUsername();
     }
 
-    @When("I request post generate token with valid username and valid password")
-    public void iRequestPostGenerateTokenWithValidUsernameAndValidPassword() {
-        postGenerateToken.requestPostGenerateTokenWithValidUsernameAndValidPassword();
+    @When("I request with integer username and valid password")
+    public void iRequestWithIntegerUsernameAndValidPassword() {
+        postGenerateToken.requestWithIntegerUserName();
     }
 
-    @And("get Success message")
-    public void getSuccessMessage() {postGenerateToken.validateSuccessMessage();
+    @And("I set valid username and integer password")
+    public void iSetValidUsernameAndIntegerPassword() {
+        postGenerateToken.setIntegerPassword();
     }
 
+    @When("I request with valid username and integer password")
+    public void iRequestWithValidUsernameAndIntegerPassword() {
+        postGenerateToken.requestWithIntegerPassword();
+    }
 
+    @Then("I get status code 400")
+    public void iGetStatusCode400() {
+        postGenerateToken.statusCode400();
+    }
 
+    @Given("I set url and invalid token")
+    public void iSetUrlAndInvalidToken() {
+        postGenerateToken.setUrlAndInvalidToken();
+    }
+
+    @When("I request with invalid token")
+    public void iRequestWithInvalidToken() {
+        postGenerateToken.requestWithInvalidToken();
+    }
+
+    @Then("I get status code 401")
+    public void iGetStatusCode401() {
+        postGenerateToken.statusCode401();
+    }
+
+    @Given("I set url")
+    public void iSetUrl() {
+        postGenerateToken.setUrl();
+    }
 }

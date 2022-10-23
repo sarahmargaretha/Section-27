@@ -9,133 +9,185 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class PostGenerateToken {
 
-    private String url, username, password;
+    private String url, token;
 
-    public void setUrlAndNullUsernameAndNullPassword(){
-        url = "https://demoqa.com/Account/v1/GenerateToken";
-        username = "";
-        password = "";
+    public void setUrlAndValidToken() {
+        url = "https://demoqa.com/swagger/#/Account/AccountV1GenerateTokenPost";
+        token = "1078e3d3-ece8-4237-8e8f-05ab28353052";
     }
-    public JSONObject bodyPostGenerateToken(){
+
+    public void setUrl() {
+        url = "https://demoqa.com/swagger/#/Account/AccountV1GenerateTokenPost";
+    }
+
+    public JSONObject postLoginWithToken() {
+        JSONObject body = new JSONObject();
+        body.put("username", "sarahms");
+        body.put("password", "@Sarah.1203");
+        return body;
+    }
+
+    public void requestWithValidUsernameAndPassword() {
+        given().header("Authorization", "username" + token)
+                .header("Authorization", "password" + token)
+                .header("Content-Type", "application/json")
+                .body(postLoginWithToken().toJSONString());
+        when().post(url);
+    }
+
+    public void statusCode200() {
+        then().statusCode(200);
+    }
+
+    public void setUrlAndNullBody() {
+        url = "https://demoqa.com/swagger/#/Account/AccountV1GenerateTokenPost";
+        token = "1078e3d3-ece8-4237-8e8f-05ab28353052";
+    }
+
+    public JSONObject bodyLoginWithNullBody() {
         JSONObject body = new JSONObject();
         body.put("username", "");
         body.put("password", "");
         return body;
     }
-    public void requestPostGenerateToken(){
-        given().header("Content-Type", "application/json")
-                .body(bodyPostGenerateToken().toJSONString());
+
+    public void requestWithNullBody() {
+        given().header("Authorization", "username" + token)
+                .header("Authorization", "password" + token)
+                .header("Content-Type", "application/json")
+                .body(bodyLoginWithNullBody().toJSONString());
         when().post(url);
     }
-    public void validateStatusCode(){then().statusCode(400);
-    }
-    public void validateStatusMessage(){
-        then().body(equalTo("Error"));
+
+    public void setUrlAndValidPassword() {
+        url = "https://demoqa.com/swagger/#/Account/AccountV1GenerateTokenPost";
+        token = "1078e3d3-ece8-4237-8e8f-05ab28353052";
     }
 
-    public void setUrlAndNullUsernameAndValidPassword(){
-        url = "https://demoqa.com/Account/v1/GenerateToken";
-        username = "";
-        password = "@Sarah.1203";
-    }
-    public JSONObject bodyPostGenerateTokenWithNullUsernameAndValidPassword(){
+    public JSONObject bodyLoginWithValidPassword() {
         JSONObject body = new JSONObject();
         body.put("username", "");
         body.put("password", "@Sarah.1203");
         return body;
     }
-    public void requestPostGenerateTokenWithNullUsernameAndValidPassword() {
-        given().header("Content-Type", "application/json")
-                .body(bodyPostGenerateTokenWithNullUsernameAndValidPassword().toJSONString());
+
+    public void requestWithNullUserName() {
+        given().header("Authorization", "username" + token)
+                .header("Authorization", "password" + token)
+                .header("Content-Type", "application/json")
+                .body(bodyLoginWithValidPassword().toJSONString());
         when().post(url);
     }
 
-    public void setUrlAndValidUsernameAndNullPassword(){
-        url = "https://demoqa.com/Account/v1/GenerateToken";
-        username = "sarahms";
-        password = "";
+    public void statusCode400() {
+        then().statusCode(400);
     }
-    public JSONObject bodyPostGenerateTokenWithValidUsernameAndNullPassword(){
+
+    public void setUrlAndValidUserName() {
+        url = "https://demoqa.com/swagger/#/Account/AccountV1GenerateTokenPost";
+        token = "1078e3d3-ece8-4237-8e8f-05ab28353052";
+    }
+
+    public JSONObject bodyLoginWithNullPassword() {
         JSONObject body = new JSONObject();
         body.put("username", "sarahms");
         body.put("password", "");
         return body;
     }
-    public void requestPostGenerateTokenWithValidUsernameAndNullPassword() {
-        given().header("Content-Type", "application/json")
-                .body(bodyPostGenerateTokenWithValidUsernameAndNullPassword().toJSONString());
+
+    public void requestWithNullPassword() {
+        given().header("Authorization", "username" + token)
+                .header("Authorization", "password" + token)
+                .header("Content-Type", "application/json")
+                .body(bodyLoginWithNullPassword().toJSONString());
         when().post(url);
     }
 
-    public void setUrlAndInvalidUsernameAndInvalidPassword(){
-        url = "https://demoqa.com/Account/v1/GenerateToken";
-        username = "sarah";
-        password = "12maret2003";
+    public void setUrlAndInvalidBody() {
+        url = "https://demoqa.com/swagger/#/Account/AccountV1GenerateTokenPost";
+        token = "1078e3d3-ece8-4237-8e8f-05ab28353052";
     }
-    public JSONObject bodyPostGenerateTokenWithInvalidUsernameAndInvalidPassword(){
+
+    public JSONObject bodyLoginWithinvalidUsernameAndPassword() {
         JSONObject body = new JSONObject();
         body.put("username", "sarah");
         body.put("password", "12maret2003");
         return body;
     }
-    public void requestPostGenerateTokenWithInvalidUsernameAndInvalidPassword() {
-        given().header("Content-Type", "application/json")
-                .body(bodyPostGenerateTokenWithInvalidUsernameAndInvalidPassword().toJSONString());
+
+    public void requestWithInvalidBody() {
+        given().header("Authorization", "username" + token)
+                .header("Authorization", "password" + token)
+                .header("Content-Type", "application/json")
+                .body(bodyLoginWithinvalidUsernameAndPassword().toJSONString());
         when().post(url);
     }
-    public void validateCode(){then().statusCode(200);}
-    public void validateFailedMessage(){then().body(equalTo("Failed"));}
-
-
-    public void setUrlAndValidUsernameAndInvalidPassword(){
-        url = "https://demoqa.com/Account/v1/GenerateToken";
-        username = "sarahms";
-        password = "12maret2003";
+    public void setUrlAndIntegerBody () {
+        url = "https://demoqa.com/swagger/#/Account/AccountV1GenerateTokenPost";
+        token = "1078e3d3-ece8-4237-8e8f-05ab28353052";
     }
-    public JSONObject bodyPostGenerateTokenWithValidUsernameAndInvalidPassword() {
+    public JSONObject bodyLoginWithIntegerBody() {
         JSONObject body = new JSONObject();
-        body.put("username", "sarahms");
-        body.put("password", "12maret2003");
+        body.put("username", 123);
+        body.put("password", 4567);
         return body;
     }
-    public void requestPostGenerateTokenWithValidUsernameAndInvalidPassword() {
-        given().header("Content-Type", "application/json")
-                    .body(bodyPostGenerateTokenWithValidUsernameAndInvalidPassword().toJSONString());
+
+    public void requestWithIntegerBody () {
+        given().header("Authorization", "username" + token)
+                .header("Authorization", "password" + token)
+                .header("Content-Type", "application/json")
+                .body(bodyLoginWithIntegerBody().toJSONString());
         when().post(url);
     }
-
-    public void setUrlAndInvalidUsernameAndValidPassword() {
-        url = "https://demoqa.com/Account/v1/GenerateToken";
-        username = "sarah";
-        password = "@Sarah.1203";
+    public void setIntegerUsername () {
+        url = "https://demoqa.com/swagger/#/Account/AccountV1GenerateTokenPost";
+        token = "1078e3d3-ece8-4237-8e8f-05ab28353052";
     }
-    public JSONObject bodyPostGenerateTokenWithInvalidUsernameAndValidPassword() {
+    public JSONObject bodyLoginWithIntegerUserName() {
         JSONObject body = new JSONObject();
-        body.put("username", "sarah");
+        body.put("username", 123);
         body.put("password", "@Sarah.1203");
         return body;
     }
-    public void requestPostGenerateTokenWithInvalidUsernameAndValidPassword() {
-        given().header("Content-Type", "application/json")
-                .body(bodyPostGenerateTokenWithInvalidUsernameAndValidPassword().toJSONString());
+    public void requestWithIntegerUserName () {
+        given().header("Authorization", "username" + token)
+                .header("Authorization", "password" + token)
+                .header("Content-Type", "application/json")
+                .body(bodyLoginWithIntegerUserName().toJSONString());
         when().post(url);
     }
 
-    public void setUrlAndValidUsernameAndValidPassword(){
-        url = "https://demoqa.com/Account/v1/GenerateToken";
-        username = "sarahms";
-        password = "@Sarah.1203";
+    public void setIntegerPassword () {
+        url = "https://demoqa.com/swagger/#/Account/AccountV1GenerateTokenPost";
+        token = "1078e3d3-ece8-4237-8e8f-05ab28353052";
     }
-    public JSONObject bodyPostGenerateTokenWithValidUsernameAndValidPassword(){
+    public JSONObject bodyLoginWithIntegerPassword() {
         JSONObject body = new JSONObject();
         body.put("username", "sarahms");
-        body.put("password", "@Sarah.1203");
+        body.put("password", 123);
         return body;
     }
-    public void requestPostGenerateTokenWithValidUsernameAndValidPassword() {
-        given().header("Content-Type", "application/json")
-                .body(bodyPostGenerateTokenWithValidUsernameAndValidPassword().toJSONString());
+
+    public void requestWithIntegerPassword () {
+        given().header("Authorization", "username" + token)
+                .header("Authorization", "password" + token)
+                .header("Content-Type", "application/json")
+                .body(bodyLoginWithIntegerPassword().toJSONString());
         when().post(url);
     }
-    public void validateSuccessMessage(){then().body(equalTo("Success"));}
-}
+
+    public void setUrlAndInvalidToken() {
+        url = "https://demoqa.com/swagger/#/Account/AccountV1GenerateTokenPost";
+        token = "abc";
+    }
+
+    public void requestWithInvalidToken() {
+        given().header("Authorization", token)
+                .header("Content-Type", "application/json");
+        when().get(url);
+    }
+
+    public void statusCode401() {
+        then().statusCode(401);
+    }}

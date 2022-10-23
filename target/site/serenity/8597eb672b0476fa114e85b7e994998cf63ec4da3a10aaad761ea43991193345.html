@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8"/>
-    <title>Post generate token with invalid username and invalid password</title>
+    <title>Login with invalid token</title>
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
@@ -125,8 +125,8 @@
         <span class="breadcrumbs">
             <a href="index.html" class="breadcrumbs">Home</a>
 
-            > <a href="f934544ef54ae7e178d20ecc5e0a332bce79a5a15fa5670f00bbb7a0a3eb1480.html">Post Generate Token</a>
-        > Post generate token with invalid username and invalid password
+            > <a href="659b4b201bbdd44055eda3f2f20dedb1c65ee15e39b7b04c708033b8a75774b4.html">Login With Generate Token</a>
+        > Login with invalid token
         </span>
         </div>
         <div class="rightbg"></div>
@@ -147,7 +147,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 05-10-2022 14:07</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 23-10-2022 22:33</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -162,7 +162,7 @@
                                 <div>
                                     <h3 class="discreet-story-header">
                                         <i class="fa fa-2x fa-comments-o"></i>
-                                        <span class="story-header-title">Post Generate Token </span>
+                                        <span class="story-header-title">Login With Generate Token </span>
                                     </h3>
 
                                 </div>
@@ -177,10 +177,10 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-times-circle failure-icon fa-2x' title='FAILURE'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
                             <span class="test-case-title">
-                                <span class="failing-color">
-                                    Post generate token with invalid username and invalid password
+                                <span class="success-color">
+                                    Login with invalid token
                                         <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -230,7 +230,7 @@
                         <td class="step-description-column">
                             <div class="step-description">
                                     <span class="top-level-step">
-                                                Given I set url and invalid username and invalid password to post generate token
+                                                Given I set url and invalid token
                                         </span>
                                 <span class="evidence">
                                 </span>
@@ -256,7 +256,7 @@
                                 <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1')"
                                    style="display:block;">
                                     <span class="top-level-step">
-                                                When I request post generate token with invalid username and invalid password
+                                                When I request with invalid token
                                         </span>
                                 </a>
                                 <span class="evidence">
@@ -265,7 +265,7 @@
                         </td>
 
                         <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                        <td width="100"><span class="top-level-step">1s 291ms</span></td>
+                        <td width="100"><span class="top-level-step">741ms</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -282,7 +282,7 @@
                         <td class="step-description-column">
                             <div class="step-description">
                                     <span class="nested-group-step">
-                                                POST https://demoqa.com/Account/v1/GenerateToken
+                                                GET https://demoqa.com/swagger/
                                         </span>
                                 <span class="evidence">
                                         <span class="piece-of-evidence">
@@ -298,19 +298,19 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h4>Response</h4>
-                                        <p>URL: https://demoqa.com/Account/v1/GenerateToken</p>
-                                        <p>Status code: 400</p>
+                                        <p>URL: https://demoqa.com/swagger/</p>
+                                        <p>Status code: 200</p>
                                         <p>Content Type: application/json</p>
                                         <h4>Request Headers</h4>
-                                        <pre>Accept=*/*<br>Content-Type=application/json</pre>
+                                        <pre>Authorization=abc<br>Accept=*/*<br>Content-Type=application/json</pre>
                                         <h4>Content Body</h4>
-                                        <pre>{<br>    &quot;password&quot;: &quot;12maret2003&quot;,<br>    &quot;username&quot;: &quot;sarah&quot;<br>}</pre>
+                                        <pre></pre>
                                         <h4>Request Cookies</h4>
                                         <pre></pre>
                                         <h4>Response Headers</h4>
-                                        <pre>Server: nginx/1.17.10 (Ubuntu)<br>Date: Wed, 05 Oct 2022 07:07:20 GMT<br>Content-Type: application/json; charset=utf-8<br>Content-Length: 59<br>Connection: keep-alive<br>X-Powered-By: Express<br>ETag: W/&quot;3b-kfIAtNk1nsLmMi3OoOPrbSi9YOU&quot;</pre>
+                                        <pre>Server: nginx/1.17.10 (Ubuntu)<br>Date: Sun, 23 Oct 2022 15:33:26 GMT<br>Content-Type: text/html; charset=utf-8<br>Transfer-Encoding: chunked<br>Connection: keep-alive<br>X-Powered-By: Express<br>ETag: W/&quot;c1f-F2xZTJLKhCo1XhlvmwRwwX3nXPs&quot;<br>Content-Encoding: gzip</pre>
                                     <h4>Response Body</h4>
-                                        <pre>{<br>    &quot;code&quot;: &quot;1200&quot;,<br>    &quot;message&quot;: &quot;UserName and Password required.&quot;<br>}</pre>
+                                        <pre>&lt;html lang=&quot;en&quot;&gt;<br>  &lt;head&gt;<br>    &lt;meta charset=&quot;UTF-8&quot;/&gt;<br>    &lt;title&gt;Swagger UI&lt;/title&gt;<br>    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;./swagger-ui.css&quot;/&gt;<br>    &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; href=&quot;./favicon-32x32.png&quot; sizes=&quot;32x32&quot;/&gt;<br>    &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; href=&quot;./favicon-16x16.png&quot; sizes=&quot;16x16&quot;/&gt;<br>    &lt;style&gt;<br>    html<br>    {<br>      box-sizing: border-box;<br>      overflow: -moz-scrollbars-vertical;<br>      overflow-y: scroll;<br>    }<br>    *,<br>    *:before,<br>    *:after<br>    {<br>      box-sizing: inherit;<br>    }<br><br>    body {<br>      margin:0;<br>      background: #fafafa;<br>    }<br>  &lt;/style&gt;<br>  &lt;/head&gt;<br>  &lt;body&gt;<br>    &lt;svg style=&quot;position:absolute;width:0;height:0&quot;&gt;<br>      &lt;defs&gt;<br>        &lt;symbol viewbox=&quot;0 0 20 20&quot; id=&quot;unlocked&quot;&gt;<br>          &lt;path d=&quot;M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V6h2v-.801C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8z&quot;/&gt;<br>        &lt;/symbol&gt;<br>        &lt;symbol viewbox=&quot;0 0 20 20&quot; id=&quot;locked&quot;&gt;<br>          &lt;path d=&quot;M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8zM12 8H8V5.199C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8z&quot;/&gt;<br>        &lt;/symbol&gt;<br>        &lt;symbol viewbox=&quot;0 0 20 20&quot; id=&quot;close&quot;&gt;<br>          &lt;path d=&quot;M14.348 14.849c-.469.469-1.229.469-1.697 0L10 11.819l-2.651 3.029c-.469.469-1.229.469-1.697 0-.469-.469-.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-.469-.469-.469-1.228 0-1.697.469-.469 1.228-.469 1.697 0L10 8.183l2.651-3.031c.469-.469 1.228-.469 1.697 0 .469.469.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c.469.469.469 1.229 0 1.698z&quot;/&gt;<br>        &lt;/symbol&gt;<br>        &lt;symbol viewbox=&quot;0 0 20 20&quot; id=&quot;large-arrow&quot;&gt;<br>          &lt;path d=&quot;M13.25 10L6.109 2.58c-.268-.27-.268-.707 0-.979.268-.27.701-.27.969 0l7.83 7.908c.268.271.268.709 0 .979l-7.83 7.908c-.268.271-.701.27-.969 0-.268-.269-.268-.707 0-.979L13.25 10z&quot;/&gt;<br>        &lt;/symbol&gt;<br>        &lt;symbol viewbox=&quot;0 0 20 20&quot; id=&quot;large-arrow-down&quot;&gt;<br>          &lt;path d=&quot;M17.418 6.109c.272-.268.709-.268.979 0s.271.701 0 .969l-7.908 7.83c-.27.268-.707.268-.979 0l-7.908-7.83c-.27-.268-.27-.701 0-.969.271-.268.709-.268.979 0L10 13.25l7.418-7.141z&quot;/&gt;<br>        &lt;/symbol&gt;<br>        &lt;symbol viewbox=&quot;0 0 24 24&quot; id=&quot;jump-to&quot;&gt;<br>          &lt;path d=&quot;M19 7v4H5.83l3.58-3.59L8 6l-6 6 6 6 1.41-1.41L5.83 13H21V7z&quot;/&gt;<br>        &lt;/symbol&gt;<br>        &lt;symbol viewbox=&quot;0 0 24 24&quot; id=&quot;expand&quot;&gt;<br>          &lt;path d=&quot;M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z&quot;/&gt;<br>        &lt;/symbol&gt;<br>      &lt;/defs&gt;<br>    &lt;/svg&gt;<br>    &lt;div id=&quot;swagger-ui&quot;/&gt;<br>    &lt;script src=&quot;./swagger-ui-bundle.js&quot;/&gt;<br>    &lt;script src=&quot;./swagger-ui-standalone-preset.js&quot;/&gt;<br>    &lt;script src=&quot;./swagger-ui-init.js&quot;/&gt;<br>    &lt;style&gt;<br>  .swagger-ui .topbar .download-url-wrapper { display: none } undefined<br>&lt;/style&gt;<br>  &lt;/body&gt;<br>&lt;/html&gt;</pre>
                                 </div>
                             </div>
                         </div>
@@ -327,126 +327,32 @@
                                 </table>
                             </td>
                         </tr>
-                    <tr class="test-FAILURE">
+                    <tr class="test-SUCCESS">
 
                         <td width="50" class="step-icon">
                             <a name="2"></a>
-                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2')"
-                                   style="display:block">
-                                    <i class="fa fa-plus-square-o imgstepSection2 failure-icon"
-                                       style="margin-left: 20px; float:left; padding-right:5px"></i>
-                                </a>
-                        </td>
-
-                        <td class="step-description-column">
-                            <div class="step-description">
-                                <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2')"
-                                   style="display:block;">
-                                    <span class="top-level-step">
-                                                Then I will get code 200
-                                        </span>
-                                </a>
-                                <span class="evidence">
-                                </span>
-                            </div>
-                        </td>
-
-                        <td width="130"><span class="top-level-step">FAILURE</span></td>
-                        <td width="100"><span class="top-level-step">011ms</span></td>
-                    </tr>
-                        <tr>
-                            <td colspan="5">
-                                <table id="stepSection2" class="step-table-nested" style="display:none;">
-                    <tr class="test-FAILURE">
-
-                        <td width="70" class="step-icon">
-                            <a name="2-0"></a>
-                                <span style="margin-left: 40px;"
-                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></a>
-                                </span>
-                        </td>
-
-                        <td class="step-description-column">
-                            <div class="step-description">
-                                    <span class="nested-group-step">
-                                                Validate code
-                                        </span>
-                                <span class="evidence">
-                                </span>
-                            </div>
-                        </td>
-
-                        <td width="130"><span class="nested-group-step">FAILURE</span></td>
-                        <td width="100"><span class="nested-group-step">001ms</span></td>
-                    </tr>
-                        <tr class="test-FAILURE">
-                            <td width="40">&nbsp</td>
-                            <td width="%" colspan="3" class="error-message-cell">
-
-
-    <div style="display:block">
-        <div class="table">
-            <div class="row">
-                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
-                    <span class="error-message error-message-title">java.lang.AssertionError: 1 expectation failed.<br>Expected status code &lt;200&gt; but was &lt;400&gt;.<br></span>
-                </div>
-                <div class="col-sm-2">
-                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-5""
-                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
-                </div>
-             </div>
-        </div>
-    <div>
-
-    <!-- Details Section -->
-    <div class="row stacktrace-details">
-      <div class="col">
-        <div class="collapse multi-collapse" id="stacktraceModal-5">
-            <div class="card">
-                <div class="card-header">
-                    <h4>java.lang.AssertionError </h4>
-                </div>
-                <div class="card-body">
-                    <div>
-                        <pre>io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)<br />io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)<br />io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)<br />io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)<br />io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy:-1)<br />groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)<br />groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)<br />io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)<br />io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:-1)<br />starter.PostGenerateToken.validateCode(PostGenerateToken.java:86)<br />starter.stepdefinitions.PostGenerateTokenSteps.iWillGetCode(PostGenerateTokenSteps.java:63)<br />io.cucumber.java.Invoker.doInvoke(Invoker.java:66)<br />io.cucumber.java.Invoker.invoke(Invoker.java:24)<br />io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)<br />io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)<br />io.cucumber.core.runner.TestStep.run(TestStep.java:64)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)<br />io.cucumber.core.runner.TestCase.run(TestCase.java:104)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java:73)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:258)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:57)<br /></pre>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-                            </td>
-                        </tr>
-
-                                </table>
-                            </td>
-                        </tr>
-                    <tr class="test-SKIPPED">
-
-                        <td width="50" class="step-icon">
-                            <a name="3"></a>
                                 <span style="margin-left: 20px;"
-                                      class="top-level-icon"><a href='##beforetable'><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></a>
+                                      class="top-level-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
                                 </span>
                         </td>
 
                         <td class="step-description-column">
                             <div class="step-description">
                                     <span class="top-level-step">
-                                                And get Failed message
+                                                Then I get status code 200
                                         </span>
                                 <span class="evidence">
                                 </span>
                             </div>
                         </td>
 
-                        <td width="130"><span class="top-level-step">SKIPPED</span></td>
-                        <td width="100"><span class="top-level-step">002ms</span></td>
+                        <td width="130"><span class="top-level-step">SUCCESS</span></td>
+                        <td width="100"><span class="top-level-step">001ms</span></td>
                     </tr>
-                <tr class="test-FAILURE">
+                <tr class="test-SUCCESS">
                         <td colspan="2"></td>
-                    <td width="130"><span class="top-level-step"><em>FAILURE</em></span></td>
-                    <td width="100"><span class="top-level-step"><em>1.32s</em></span></td>
+                    <td width="130"><span class="top-level-step"><em>SUCCESS</em></span></td>
+                    <td width="100"><span class="top-level-step"><em>0.75s</em></span></td>
                 </tr>
 
             </table>
