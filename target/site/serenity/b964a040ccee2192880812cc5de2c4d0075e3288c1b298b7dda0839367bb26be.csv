@@ -1,0 +1,8 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Post Generate Token","Post generate token with null username and null password","FAILURE","2022-10-05T14:07:11.125789+07:00[Asia/Bangkok]","0.0","4.24"
+"Post Generate Token","Post generate token with null username and valid password","FAILURE","2022-10-05T14:07:15.3797277+07:00[Asia/Bangkok]","0.0","1.0"
+"Post Generate Token","Post generate token with valid username and null password","FAILURE","2022-10-05T14:07:16.3878952+07:00[Asia/Bangkok]","0.0","0.9"
+"Post Generate Token","Post generate token with invalid username and invalid password","FAILURE","2022-10-05T14:07:17.2909095+07:00[Asia/Bangkok]","0.0","1.32"
+"Post Generate Token","Post generate token with valid username and invalid password","FAILURE","2022-10-05T14:07:18.6378004+07:00[Asia/Bangkok]","0.0","1.21"
+"Post Generate Token","Post generate token with invalid username and valid password","FAILURE","2022-10-05T14:07:19.8560836+07:00[Asia/Bangkok]","0.0","1.4"
+"Post Generate Token","Post generate token with valid username and valid password","FAILURE","2022-10-05T14:07:21.2581819+07:00[Asia/Bangkok]","0.0","0.97"
