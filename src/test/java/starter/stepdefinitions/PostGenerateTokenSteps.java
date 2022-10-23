@@ -124,4 +124,9 @@ public class PostGenerateTokenSteps {
     public void iSetUrl() {
         postGenerateToken.setUrl();
     }
+
+    @When("I request with null body")
+    public void iRequestWithNullBody() {
+        postGenerateToken.requestWithNullBody();
+    }
 }
