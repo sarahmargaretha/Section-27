@@ -10,7 +10,7 @@ Feature: Login with generate token
 
   Scenario: Login with null body
     Given I set url and null body
-    When I request with null username and null password
+    When I request with null body
     Then I get status code 400
 
   Scenario: Login with null username
